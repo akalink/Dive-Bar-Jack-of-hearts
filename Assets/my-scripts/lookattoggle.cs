@@ -91,13 +91,14 @@ namespace akaUdon
 
         public void FirstAnswer()
         {
+            
             if (Networking.LocalPlayer.playerId == playerTalking)
             {
                 SendCustomNetworkEvent(NetworkEventTarget.All,nameof(FirstAnswerNetwork));
             }
         }
 
-        private void FirstAnswerNetwork()
+        public void FirstAnswerNetwork()
         {
             Debug.Log("this is an answer");   
         }

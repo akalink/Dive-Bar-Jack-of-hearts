@@ -1,9 +1,11 @@
 ﻿
+using System;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 using VRCPrefabs.CyanEmu;
+using UnityEngine.UI;
 
 namespace akaUdon
 {
@@ -22,7 +24,20 @@ namespace akaUdon
 
         [UdonSynced()] private bool screenBool = false;
         [SerializeField] private Renderer screen;
-        
+        [Header("Animator to adjust bloom")]
+        [SerializeField] private Animator bloomAnimator;
+        [SerializeField] private string animName;
+        [SerializeField] private string animBool;
+        [SerializeField] private Slider bloomSlider;
+
+
+        private void Start()
+        {
+            if (Networking.LocalPlayer.IsUserInVR() == false)
+            {
+                bloomAnimator.SetBool(animBool, true);
+            }
+        }
 
         public void AudioLink()
         {
@@ -67,6 +82,10 @@ namespace akaUdon
         public override void OnDeserialization()
         {
             screen.enabled =(screenBool);
+        }
+
+        public void _SliderValue(){
+            bloomAnimator.SetFloat(animName, bloomSlider.value);
         }
     }
 }
