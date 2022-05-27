@@ -81,3 +81,4 @@ ProjectVersion.txt
 *.asmdef
 
 !Assets/my-scripts
+!Assets/my-scripts/*
