@@ -82,3 +82,4 @@ ProjectVersion.txt
 
 !Assets/my-scripts
 !Assets/my-scripts/*
+!gitImages/*
