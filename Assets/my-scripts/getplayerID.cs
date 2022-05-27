@@ -5,7 +5,7 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
-
+//oh yeah this was a experiment that strait up DID NOT work
 public class getplayerID : UdonSharpBehaviour
 {
     public TextMeshProUGUI text;
