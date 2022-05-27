@@ -80,4 +80,4 @@ ProjectVersion.txt
 *.meta
 *.asmdef
 
-!Assets/my scripts
+!Assets/my-scripts
