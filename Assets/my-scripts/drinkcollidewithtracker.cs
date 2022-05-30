@@ -36,7 +36,7 @@ namespace akaUdon
         }
         private void Update()
         {
-            ReportState();
+            //ReportState();
             if (isFilling)
             {
                 //filling code
@@ -161,9 +161,10 @@ namespace akaUdon
 
         #endregion
 
-        private void ReportState()
+        /*private void ReportState()
         {
             Debug.Log("isLeftAlone: "+ isLeftAlone + " isDrinkHand" + isDrinkingHand + " state of material: " + drinkState);
-        }
+        }*/
+        
     }
 }
